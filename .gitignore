@@ -1,5 +1,5 @@
 
-sonify
+#sonify
 *.o
 *.obj
 *.a
@@ -13,10 +13,11 @@ __pycache__/
 
 audio_output/*.wav
 
-data/cleaned/*
-data/raw/*
-!data/cleaned/.gitkeep
-!data/raw/.gitkeep
+#data/cleaned/*
+#data/raw/*
+
+#!data/cleaned/.gitkeep
+#!data/raw/.gitkeep
 
 .DS_Store
 

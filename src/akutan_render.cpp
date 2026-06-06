@@ -108,7 +108,7 @@ int main() {
     stk::FileWvOut output;
     output.openFile("audio_output/akutan_sonification.wav", 1, stk::FileWrite::FILE_WAV, stk::Stk::STK_SINT16);
 
-    std::ifstream file("data/akutan_cleaned.csv");
+    std::ifstream file("data/cleaned/akutan_cleaned.csv");
     if (!file.is_open()) {
         std::cerr << "could not open akutan_cleaned.csv." << std::endl;
         return 1;
