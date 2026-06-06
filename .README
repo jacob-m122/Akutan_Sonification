@@ -1,0 +1,47 @@
+Aleutian Islands Akutan Volcano Granular Sonification
+
+This project is a data sonification engine that transforms seismic data from the Akutan Volcanos of the Aleutian Islands (1997–2017) into immersive audio using C++ and the Synthesis ToolKit (STK). 
+This project involves mapping seismic parameters including magnitude, depth, and frequency to granular synthesis parameters.
+the engine creates a two minute sonification representing two decades of volcanic activity.
+
+The dataset is provided by Hannah Mark, Lamont Assistant Research Professor in Marine & Polar Geophysics.
+
+This project was developed as part of MUS 410 at the University of Oregon.
+
+Dependencies
+This project requires the Synthesis ToolKit (STK). Ensure it is installed on your system:
+
+macOS (Homebrew): brew install stk
+
+Linux (Ubuntu/Debian): sudo apt-get install libstk0-dev
+
+Setup & Compilation
+1. Directory Structure
+Ensure your project folder is organized as follows:
+
+root/
+├── audio_output/
+│   └── akutan_sonification.wav
+├── data/
+│   ├── cleaned/
+│   │   └── akutan_cleaned.csv
+│   └── raw/
+│       └── akutan_raw.csv
+├── IR/
+│   └── fm-ir1.wav
+└── src/
+    ├── akutan_render.cpp
+    └── akutan-clean.py
+
+2. Compilation
+Compile the project using g++ with the necessary include and library paths.
+
+Bash
+g++ -std=c++17 -I/opt/homebrew/include/stk -L/opt/homebrew/lib akutan_render.cpp -lstk -o sonify
+
+3. Execution
+Run the compiled binary from the project root:
+
+Bash
+./sonify
+The engine will process akutan_cleaned.csv and generate the final sonification in the audio_output/ folder.
